@@ -1,4 +1,5 @@
-FROM ubuntu:bionic
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 COPY etc/qemu-arm-static /usr/bin/
 COPY etc/qemu-aarch64-static /usr/bin/
@@ -9,7 +10,7 @@ RUN apt-get update && \
         automake autoconf libtool \
         git sox wget subversion \
         python2.7 python3 \
-        libatlas-dev libatlas3-base
+        libatlas-base-dev libatlas3-base
 
 RUN ln -s /usr/bin/python2.7 /usr/bin/python2
 
