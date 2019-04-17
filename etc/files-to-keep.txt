@@ -15,6 +15,7 @@
 /kaldi/src/lib/libkaldi-matrix.so
 /kaldi/src/lib/libkaldi-util.so
 /kaldi/src/lib/libkaldi-hmm.so
+/kaldi/src/lib/libkaldi-lm.so
 /kaldi/src/hmm/libkaldi-hmm.so
 /kaldi/src/featbin/add-deltas
 /kaldi/src/featbin/compute-cmvn-stats
@@ -30,6 +31,7 @@
 /kaldi/src/base/libkaldi-base.so
 /kaldi/src/gmmbin/gmm-latgen-faster
 /kaldi/src/lmbin/arpa2fst
+/kaldi/src/lm/libkaldi-lm.so
 /kaldi/src/util/libkaldi-util.so
 /kaldi/src/fstbin/fsttablecompose
 /kaldi/src/fstbin/fstrmsymbols
