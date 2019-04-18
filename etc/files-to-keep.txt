@@ -11,7 +11,12 @@
 /kaldi/tools/openfst/bin/fstinfo
 /kaldi/tools/openfst/bin/fstarcsort
 /kaldi/tools/openfst/bin/fstcompile
-/kaldi/src/lib
+/kaldi/src/lib/libkaldi-base.so
+/kaldi/src/lib/libkaldi-matrix.so
+/kaldi/src/lib/libkaldi-util.so
+/kaldi/src/lib/libkaldi-hmm.so
+/kaldi/src/lib/libkaldi-lm.so
+/kaldi/src/lib/libkaldi-decoder.so
 /kaldi/src/featbin/add-deltas
 /kaldi/src/featbin/compute-cmvn-stats
 /kaldi/src/featbin/apply-cmvn
@@ -36,3 +41,4 @@
 /kaldi/src/fstbin/fstminimizeencoded
 /kaldi/src/fstbin/fstaddselfloops
 /kaldi/src/fstbin/fstpushspecial
+/kaldi/src/fstbin/fstconvert
