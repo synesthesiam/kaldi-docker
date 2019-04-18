@@ -11,6 +11,7 @@
 /kaldi/tools/openfst/bin/fstinfo
 /kaldi/tools/openfst/bin/fstarcsort
 /kaldi/tools/openfst/bin/fstcompile
+/kaldi/tools/openfst/bin/fstconvert
 /kaldi/src/lib/libkaldi-base.so
 /kaldi/src/lib/libkaldi-matrix.so
 /kaldi/src/lib/libkaldi-util.so
@@ -41,4 +42,3 @@
 /kaldi/src/fstbin/fstminimizeencoded
 /kaldi/src/fstbin/fstaddselfloops
 /kaldi/src/fstbin/fstpushspecial
-/kaldi/src/fstbin/fstconvert
