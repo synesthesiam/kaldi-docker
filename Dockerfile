@@ -10,11 +10,14 @@ RUN apt-get update && \
         automake autoconf libtool \
         git sox wget subversion \
         python2.7 python3 \
-        libatlas-base-dev libatlas3-base
+        libatlas-base-dev libatlas3-base \
+        gfortran
 
 RUN ln -sf /usr/bin/python2.7 /usr/bin/python2
 
-RUN cd / && git clone https://github.com/kaldi-asr/kaldi.git
+COPY download/kaldi-master.tar.gz /
+RUN cd / && tar -xvf kaldi-master.tar.gz && \
+    mv /kaldi-master /kaldi
 
 RUN cd /kaldi/tools && \
     make
