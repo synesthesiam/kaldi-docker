@@ -38,4 +38,7 @@ RUN cd /kaldi/src && \
     make depend -j 8 && \
     make -j 8
 
+RUN strip --strip-all /kaldi/src/lib/*.so*
+RUN strip --strip-all /kaldi/tools/openfst/lib/*.so*
+
 COPY etc/files-to-keep.txt /
