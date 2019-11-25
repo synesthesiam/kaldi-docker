@@ -22,8 +22,15 @@ RUN cd / && tar -xvf kaldi-master.tar.gz && \
 RUN cd /kaldi/tools && \
     make
 
-RUN cd /kaldi/src && \
-    ./configure --shared --mathlib=ATLAS
+RUN touch /kaldi.env
+
+RUN if [ -f '/usr/lib/arm-linux-gnueabihf/libatlas.so' ]; then echo export ATLASLIBDIR='/usr/lib/arm-linux-gnueabihf' > /kaldi.sh; fi
+
+RUN if [ -f '/usr/lib/aarch64-linux-gnu/libatlas.so' ]; then echo export ATLASLIBDIR='/usr/lib/aarch64-linux-gnu' > /kaldi.sh; fi
+
+RUN echo cd /kaldi/src >> /kaldi.sh && \
+    echo ./configure --shared --mathlib=ATLAS >> /kaldi.sh && \
+    sh /kaldi.sh
 
 RUN if [ "$(uname -m)" = "aarch64" ]; then sed -i 's/-msse -msse2/-ftree-vectorize/g' /kaldi/src/kaldi.mk ; fi
 
